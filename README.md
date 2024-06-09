@@ -25,7 +25,7 @@ cmake ..
 make
 sudo make install
 ```
-4. Go back to the root directory (i.e., /Python-DBoW3), run
+4. Go back to the root directory (i.e., `/Python-DBoW3`), run
 ```
 pip install .
 ```
