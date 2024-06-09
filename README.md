@@ -14,16 +14,19 @@ This repo will consider supporting more general application scenarios.
 
 
 ## Installation
-```bash
-pip install DBoW3Py
+
+**Note: DO NOT use:** `pip install DBoW3Py`
+
+1. Clone this repository
+2. Create `/build` folders in both root and `/Dow3` folders
+3. Enter each `/build` folder and compile and build the package
 ```
-
-**Or** just clone this repository and pip install. Note the `--recursive` option which is
-needed for the pybind11 submodule:
-
-```bash
-git clone --recursive https://github.com/Cenbylin/Python-DBoW3.git
-cd ./Python-DBoW3
+cmake ..
+make
+sudo make install
+```
+4. Go back to the root directory (i.e., /Python-DBoW3), run
+```
 pip install .
 ```
 
@@ -33,7 +36,7 @@ pip install .
 import DBoW3Py as dbow
 ```
 
-more examples are comming 
+more examples are coming 
 
 ## License
 
