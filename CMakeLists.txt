@@ -22,21 +22,21 @@ SET(REQUIRED_LIBRARIES ${REQUIRED_LIBRARIES} ${OpenCV_LIBS})
 # ----------------------------------------------------------------------------
 #   Find Dependencies -- python numpy
 # ----------------------------------------------------------------------------
-#find_package(PythonLibs 3 REQUIRED)
-#include_directories(${PYTHON_INCLUDE_DIRS})
-#SET(REQUIRED_LIBRARIES ${PYTHON_LIBRARIES})
+find_package(PythonLibs 3 REQUIRED)
+include_directories(${PYTHON_INCLUDE_DIRS})
+SET(REQUIRED_LIBRARIES ${PYTHON_LIBRARIES})
 
-include(Cmake/FindNumPy.cmake)
+include(cmake/FindNumPy.cmake)
 include_directories(${PYTHON_NUMPY_INCLUDE_DIR})
 # ----------------------------------------------------------------------------
 #   Find Dependencies -- DBoW3
 # ----------------------------------------------------------------------------
-#find_package(DBoW3 REQUIRED)
-#include_directories(${DBoW3_INCLUDE_DIRS})
-#SET(REQUIRED_LIBRARIES ${REQUIRED_LIBRARIES} ${DBoW3_LIBS})
+find_package(DBoW3 REQUIRED)
+include_directories(${DBoW3_INCLUDE_DIRS})
+SET(REQUIRED_LIBRARIES ${REQUIRED_LIBRARIES} ${DBoW3_LIBS})
 set(CMAKE_MACOSX_RPATH 1)
-add_subdirectory(DBoW3)
-include_directories(DBoW3/include)
+add_subdirectory(DBow3)
+include_directories(DBow3/include)
 SET(REQUIRED_LIBRARIES DBoW3)
 
 # ----------------------------------------------------------------------------
